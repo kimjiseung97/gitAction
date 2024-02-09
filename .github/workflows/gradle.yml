@@ -72,14 +72,14 @@ jobs:
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run:
-        aws deploy create-deployment \
-        --application-name gitaction \
-        --deployment-group-name gitaction-group \
-        --file-exists-behavior OVERWRITE \
-        --s3-location bucket=gitactoin,bundleType=zip,key=coinTalk.zip \
-        --region ap-northeast-2
-
+#      run:
+#        aws deploy create-deployment \
+#        --application-name gitaction \
+#        --deployment-group-name gitaction-group \
+#        --file-exists-behavior OVERWRITE \
+#        --s3-location bucket=gitactoin,bundleType=zip,key=coinTalk.zip \
+#        --region ap-northeast-2
+      run: aws deploy create-deployment --application-name gitaction --deployment-config-name CodeDeployDefault.AllAtOnce --deployment-group-name gitaction-group --s3-location bucket=gitactoin,bundleType=zip,key=coinTalk.zip
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
     #
