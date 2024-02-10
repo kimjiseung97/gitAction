@@ -9,6 +9,11 @@ public class testController {
 
     @GetMapping
     public ResponseEntity<Object> testController(){
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok().body("hello");
+    }
+
+    @GetMapping("/hello")
+    public ResponseEntity<?> helloController(){
+        return ResponseEntity.ok().body("test");
     }
 }
