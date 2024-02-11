@@ -9,11 +9,11 @@ public class testController {
 
     @GetMapping
     public ResponseEntity<Object> testController(){
-        return ResponseEntity.ok().body("hello");
+        return ResponseEntity.ok().body("test");
     }
 
     @GetMapping("/hello")
     public ResponseEntity<?> helloController(){
-        return ResponseEntity.ok().body("test");
+        return ResponseEntity.ok().body("hello 자동배포 테스트입니다");
     }
 }
