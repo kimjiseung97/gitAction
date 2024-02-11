@@ -19,6 +19,6 @@ public class testController {
 
     @GetMapping("/hello2")
     public ResponseEntity<?> hello2Controller(){
-        return ResponseEntity.ok().body("hello2 테스트입니다");
+        return ResponseEntity.ok().body("hello2 자동반영테스트입니다.");
     }
 }
