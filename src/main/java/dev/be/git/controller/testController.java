@@ -16,4 +16,9 @@ public class testController {
     public ResponseEntity<?> helloController(){
         return ResponseEntity.ok().body("hello 자동배포 테스트입니다");
     }
+
+    @GetMapping("/hello2")
+    public ResponseEntity<?> hello2Controller(){
+        return ResponseEntity.ok().body("hello2 테스트입니다");
+    }
 }
