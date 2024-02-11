@@ -65,7 +65,7 @@ jobs:
 
     #s3 파일 업로드
     - name: Upload to S3
-      run: aws s3 cp --region ap-northeast-2 ./coinTalk.zip s3://gitactoin
+      run: aws s3 cp --region ap-northeast-2 ./gitAction.zip s3://gitactoin
 
       # Deploy
     - name: Deploy
